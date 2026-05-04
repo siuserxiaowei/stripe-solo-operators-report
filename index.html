@@ -1,0 +1,1685 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stripe Sessions 2026 独立创业者事实审计</title>
+    <meta
+      name="description"
+      content="对 Stripe Sessions 2026 独立创业者名单文章的事实核验、修正和出海创业行动地图。"
+    />
+    <style>
+      :root {
+        --ink: #15110d;
+        --muted: #6f665f;
+        --paper: #f5f1e8;
+        --paper-deep: #e8ddcd;
+        --line: #d4c4ae;
+        --charcoal: #242320;
+        --cobalt: #1f5f9f;
+        --green: #28745a;
+        --red: #b54436;
+        --amber: #b7791f;
+        --mint: #dbeedc;
+        --bluewash: #dbe9f1;
+        --rosewash: #f2dfdc;
+        --shadow: 0 18px 44px rgba(34, 29, 23, 0.12);
+        color-scheme: light;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(90deg, rgba(21, 17, 13, 0.035) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(21, 17, 13, 0.035) 1px, transparent 1px),
+          radial-gradient(circle at 18% 8%, rgba(31, 95, 159, 0.16), transparent 28rem),
+          radial-gradient(circle at 82% 2%, rgba(181, 68, 54, 0.12), transparent 30rem),
+          var(--paper);
+        background-size:
+          24px 24px,
+          24px 24px,
+          auto,
+          auto,
+          auto;
+        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Noto Serif SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: inherit;
+        text-decoration-color: rgba(31, 95, 159, 0.55);
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.16em;
+      }
+
+      button,
+      input,
+      select {
+        font: inherit;
+      }
+
+      .site-shell {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid rgba(36, 35, 32, 0.12);
+        background: rgba(245, 241, 232, 0.88);
+        backdrop-filter: blur(16px);
+      }
+
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 64px;
+        gap: 18px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .brand-mark {
+        display: grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        color: #fff;
+        background: var(--charcoal);
+        border: 1px solid rgba(255, 255, 255, 0.34);
+        box-shadow: 4px 4px 0 var(--cobalt);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav a {
+        flex: 0 0 auto;
+        padding: 8px 10px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+        line-height: 1;
+        text-decoration: none;
+      }
+
+      .nav a:hover {
+        color: var(--ink);
+        border-color: rgba(36, 35, 32, 0.2);
+        background: rgba(255, 255, 255, 0.38);
+      }
+
+      .hero {
+        min-height: calc(100svh - 64px);
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(310px, 430px);
+        align-items: center;
+        gap: clamp(28px, 6vw, 76px);
+        padding: clamp(42px, 7vw, 90px) 0 46px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 18px;
+        padding: 7px 10px;
+        border: 1px solid var(--line);
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.38);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: var(--green);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin-bottom: 20px;
+        font-size: clamp(48px, 9.2vw, 122px);
+        line-height: 0.9;
+        letter-spacing: 0;
+        text-wrap: balance;
+      }
+
+      .hero-lede {
+        max-width: 720px;
+        margin-bottom: 30px;
+        color: #3a332c;
+        font-size: clamp(18px, 2.2vw, 25px);
+        line-height: 1.58;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 11px 16px;
+        border: 1px solid var(--charcoal);
+        color: #fff;
+        background: var(--charcoal);
+        box-shadow: 5px 5px 0 rgba(31, 95, 159, 0.48);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+        text-decoration: none;
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .btn:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0 rgba(31, 95, 159, 0.48);
+      }
+
+      .btn.secondary {
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.45);
+        box-shadow: none;
+      }
+
+      .hero-aside {
+        position: relative;
+        min-height: 560px;
+      }
+
+      .evidence-board {
+        position: relative;
+        height: min(70vh, 630px);
+        min-height: 510px;
+        border: 1px solid var(--charcoal);
+        background:
+          linear-gradient(rgba(36, 35, 32, 0.055) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(36, 35, 32, 0.055) 1px, transparent 1px),
+          rgba(255, 255, 255, 0.48);
+        background-size: 18px 18px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .board-title {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        right: 18px;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+
+      .signal-card {
+        position: absolute;
+        width: 168px;
+        min-height: 102px;
+        padding: 14px;
+        border: 1px solid rgba(36, 35, 32, 0.88);
+        background: var(--paper);
+        box-shadow: 8px 8px 0 rgba(36, 35, 32, 0.16);
+      }
+
+      .signal-card strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 30px;
+        line-height: 1;
+      }
+
+      .signal-card span {
+        display: block;
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 11px;
+        line-height: 1.35;
+      }
+
+      .signal-card.official {
+        top: 70px;
+        left: 32px;
+        background: var(--mint);
+        transform: rotate(-3deg);
+      }
+
+      .signal-card.caveat {
+        top: 176px;
+        right: 28px;
+        background: var(--rosewash);
+        transform: rotate(2.5deg);
+      }
+
+      .signal-card.map {
+        bottom: 136px;
+        left: 38px;
+        background: var(--bluewash);
+        transform: rotate(2deg);
+      }
+
+      .signal-card.scale {
+        right: 42px;
+        bottom: 46px;
+        background: #f6e8c6;
+        transform: rotate(-2deg);
+      }
+
+      .threadline {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .threadline i {
+        position: absolute;
+        display: block;
+        height: 2px;
+        background: rgba(181, 68, 54, 0.45);
+        transform-origin: left center;
+      }
+
+      .threadline i:nth-child(1) {
+        width: 258px;
+        left: 148px;
+        top: 164px;
+        transform: rotate(19deg);
+      }
+
+      .threadline i:nth-child(2) {
+        width: 235px;
+        right: 128px;
+        top: 280px;
+        transform: rotate(139deg);
+      }
+
+      .threadline i:nth-child(3) {
+        width: 270px;
+        left: 118px;
+        bottom: 184px;
+        transform: rotate(-13deg);
+      }
+
+      .pin {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: var(--red);
+        border: 2px solid #fff;
+        border-radius: 999px;
+        box-shadow: 0 0 0 1px rgba(36, 35, 32, 0.4);
+      }
+
+      .pin.one {
+        left: 60px;
+        top: 88px;
+      }
+
+      .pin.two {
+        right: 55px;
+        top: 192px;
+      }
+
+      .pin.three {
+        left: 68px;
+        bottom: 170px;
+      }
+
+      .pin.four {
+        right: 72px;
+        bottom: 74px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.72fr) minmax(280px, 0.28fr);
+        gap: 30px;
+        align-items: end;
+        margin-bottom: 28px;
+      }
+
+      .kicker {
+        color: var(--cobalt);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 7px 0 0;
+        font-size: clamp(32px, 5vw, 68px);
+        line-height: 0.98;
+        letter-spacing: 0;
+        text-wrap: balance;
+      }
+
+      .section-note {
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .audit-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .audit-card {
+        border: 1px solid rgba(36, 35, 32, 0.2);
+        background: rgba(255, 255, 255, 0.42);
+        padding: 18px;
+        box-shadow: 0 10px 24px rgba(34, 29, 23, 0.06);
+      }
+
+      .audit-card h3 {
+        margin-bottom: 8px;
+        font-size: 21px;
+        line-height: 1.2;
+      }
+
+      .audit-card p {
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .rating {
+        display: inline-flex;
+        margin-bottom: 12px;
+        padding: 5px 8px;
+        border: 1px solid currentColor;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 11px;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .rating.ok {
+        color: var(--green);
+      }
+
+      .rating.warn {
+        color: var(--amber);
+      }
+
+      .rating.bad {
+        color: var(--red);
+      }
+
+      .corrections {
+        display: grid;
+        grid-template-columns: 0.38fr 0.62fr;
+        gap: 18px;
+        align-items: stretch;
+      }
+
+      .verdict {
+        border: 1px solid var(--charcoal);
+        background: var(--charcoal);
+        color: #fff;
+        padding: 22px;
+        box-shadow: 8px 8px 0 rgba(181, 68, 54, 0.42);
+      }
+
+      .verdict strong {
+        display: block;
+        margin-bottom: 16px;
+        font-size: clamp(32px, 5vw, 58px);
+        line-height: 0.98;
+      }
+
+      .verdict p {
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .fix-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .fix {
+        display: grid;
+        grid-template-columns: 86px 1fr;
+        gap: 14px;
+        padding: 14px;
+        border: 1px solid rgba(36, 35, 32, 0.18);
+        background: rgba(255, 255, 255, 0.42);
+      }
+
+      .fix code {
+        align-self: start;
+        padding: 4px 6px;
+        color: var(--red);
+        background: rgba(181, 68, 54, 0.08);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+      }
+
+      .fix p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .handle-tools {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+      }
+
+      .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .filter-btn {
+        min-height: 36px;
+        padding: 7px 11px;
+        border: 1px solid rgba(36, 35, 32, 0.22);
+        border-radius: 999px;
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.42);
+        cursor: pointer;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        color: #fff;
+        background: var(--charcoal);
+      }
+
+      .search {
+        min-height: 38px;
+        width: min(280px, 100%);
+        padding: 8px 12px;
+        border: 1px solid rgba(36, 35, 32, 0.25);
+        background: rgba(255, 255, 255, 0.58);
+        color: var(--ink);
+      }
+
+      .people-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .person {
+        display: flex;
+        min-height: 206px;
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px;
+        border: 1px solid rgba(36, 35, 32, 0.2);
+        background: rgba(255, 255, 255, 0.44);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease,
+          border-color 180ms ease;
+      }
+
+      .person:hover {
+        transform: translateY(-3px);
+        border-color: rgba(36, 35, 32, 0.55);
+        box-shadow: 0 16px 34px rgba(34, 29, 23, 0.1);
+      }
+
+      .person-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .avatar {
+        display: grid;
+        flex: 0 0 auto;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        color: #fff;
+        background: var(--cobalt);
+        border-radius: 50%;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-weight: 700;
+      }
+
+      .confidence {
+        flex: 0 0 auto;
+        padding: 4px 6px;
+        color: var(--green);
+        border: 1px solid currentColor;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 10px;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .confidence.medium {
+        color: var(--amber);
+      }
+
+      .confidence.low {
+        color: var(--red);
+      }
+
+      .person h3 {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.15;
+      }
+
+      .person .handle {
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+      }
+
+      .person p {
+        margin: 0;
+        color: #4b433c;
+        font-size: 14px;
+      }
+
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: auto;
+      }
+
+      .tag {
+        padding: 4px 7px;
+        border: 1px solid rgba(36, 35, 32, 0.16);
+        color: var(--muted);
+        background: rgba(245, 241, 232, 0.7);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 10px;
+        line-height: 1;
+      }
+
+      .patterns {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        border: 1px solid var(--charcoal);
+        background: rgba(255, 255, 255, 0.38);
+      }
+
+      .pattern {
+        min-height: 260px;
+        padding: 18px;
+        border-right: 1px solid rgba(36, 35, 32, 0.22);
+      }
+
+      .pattern:last-child {
+        border-right: 0;
+      }
+
+      .pattern-number {
+        display: inline-grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        margin-bottom: 16px;
+        color: #fff;
+        background: var(--charcoal);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+
+      .pattern h3 {
+        min-height: 54px;
+        margin-bottom: 10px;
+        font-size: 22px;
+        line-height: 1.2;
+      }
+
+      .pattern p {
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .roadmap {
+        display: grid;
+        grid-template-columns: 0.31fr 0.69fr;
+        gap: 20px;
+      }
+
+      .roadmap-aside {
+        border: 1px solid rgba(36, 35, 32, 0.24);
+        background: rgba(255, 255, 255, 0.44);
+        padding: 20px;
+      }
+
+      .formula {
+        display: grid;
+        gap: 8px;
+        margin-top: 16px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+      }
+
+      .formula span {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 8px 10px;
+        border: 1px solid rgba(36, 35, 32, 0.16);
+        background: var(--paper);
+      }
+
+      .timeline {
+        display: grid;
+        gap: 12px;
+      }
+
+      .week {
+        display: grid;
+        grid-template-columns: 88px 1fr;
+        gap: 16px;
+        padding: 16px;
+        border: 1px solid rgba(36, 35, 32, 0.18);
+        background: rgba(255, 255, 255, 0.43);
+      }
+
+      .week strong {
+        color: var(--cobalt);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+      }
+
+      .week h3 {
+        margin-bottom: 5px;
+        font-size: 22px;
+      }
+
+      .week p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .goal-panel {
+        border: 1px solid var(--charcoal);
+        background: #11100e;
+        color: #eee9dd;
+        box-shadow: 10px 10px 0 rgba(31, 95, 159, 0.38);
+        overflow: hidden;
+      }
+
+      .goal-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+      }
+
+      .copy-btn {
+        min-height: 34px;
+        padding: 6px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        color: #eee9dd;
+        background: transparent;
+        cursor: pointer;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+      }
+
+      .copy-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      pre {
+        margin: 0;
+        padding: 20px;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+        line-height: 1.62;
+      }
+
+      .sources {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .source {
+        padding: 14px;
+        border: 1px solid rgba(36, 35, 32, 0.18);
+        background: rgba(255, 255, 255, 0.42);
+      }
+
+      .source strong {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 16px;
+      }
+
+      .source p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .footer {
+        padding: 36px 0 46px;
+        border-top: 1px solid rgba(36, 35, 32, 0.18);
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      @media (max-width: 980px) {
+        .hero,
+        .section-head,
+        .corrections,
+        .roadmap {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          min-height: auto;
+        }
+
+        .hero-aside {
+          min-height: auto;
+        }
+
+        .audit-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .people-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .patterns {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .pattern {
+          border-bottom: 1px solid rgba(36, 35, 32, 0.22);
+        }
+
+        .pattern:nth-child(2n) {
+          border-right: 0;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .site-shell {
+          width: min(100% - 22px, 1180px);
+        }
+
+        .topbar-inner {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 12px 0;
+        }
+
+        .nav {
+          width: 100%;
+        }
+
+        .hero {
+          padding-top: 34px;
+        }
+
+        h1 {
+          font-size: clamp(42px, 15vw, 74px);
+        }
+
+        .evidence-board {
+          min-height: 460px;
+        }
+
+        .signal-card {
+          width: 148px;
+        }
+
+        .audit-grid,
+        .people-grid,
+        .patterns,
+        .sources {
+          grid-template-columns: 1fr;
+        }
+
+        .pattern {
+          min-height: auto;
+          border-right: 0;
+        }
+
+        .fix,
+        .week {
+          grid-template-columns: 1fr;
+        }
+
+        .handle-tools {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .search {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="site-shell topbar-inner">
+        <div class="brand">
+          <span class="brand-mark">Σ</span>
+          <span>Stripe Solo Operators Audit</span>
+        </div>
+        <nav class="nav" aria-label="页面导航">
+          <a href="#audit">事实审计</a>
+          <a href="#people">34 人地图</a>
+          <a href="#patterns">商业母题</a>
+          <a href="#roadmap">90 天路线</a>
+          <a href="#goal">/goal</a>
+          <a href="#sources">来源</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero site-shell">
+        <div>
+          <p class="eyebrow">2026-05-04 核验版 · 非 Stripe 官方名单</p>
+          <h1>别只看 PPT，要看谁真的能收钱。</h1>
+          <p class="hero-lede">
+            这篇文章的大方向是对的：Stripe Sessions 2026 确实把 AI、agentic commerce、全球支付和新型小公司推到了台前。但名单和收入数据需要降级处理：
+            它更像一组公开社媒线索，不是一份 Stripe 官网发布的正式名单。
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#audit">看结论与修正</a>
+            <a class="btn secondary" href="#roadmap">直接看出海路线</a>
+          </div>
+        </div>
+
+        <aside class="hero-aside" aria-label="关键事实板">
+          <div class="evidence-board">
+            <div class="board-title">
+              <span>evidence board</span>
+              <span>confidence coded</span>
+            </div>
+            <div class="threadline" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span class="pin one"></span>
+            <span class="pin two"></span>
+            <span class="pin three"></span>
+            <span class="pin four"></span>
+            <div class="signal-card official">
+              <strong>288</strong>
+              <span>Stripe Sessions 2026 官方产品/功能发布数</span>
+            </div>
+            <div class="signal-card caveat">
+              <strong>34</strong>
+              <span>文本里实际数出的 handle，不是 35</span>
+            </div>
+            <div class="signal-card map">
+              <strong>$1.9T</strong>
+              <span>Stripe 2025 支付/商业体量官方口径</span>
+            </div>
+            <div class="signal-card scale">
+              <strong>55</strong>
+              <span>顶级 AI startup 首年市场数，第三方整理口径</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="audit" class="site-shell">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Fact audit</span>
+            <h2>结论：主线成立，名单和收入必须加保险丝。</h2>
+          </div>
+          <p class="section-note">
+            我按“官方页面、个人/产品页、社媒自述、第三方数据库”四级来核。可以写成文章，但不要写成法庭证据。
+          </p>
+        </div>
+
+        <div class="audit-grid">
+          <article class="audit-card">
+            <span class="rating ok">官方确定</span>
+            <h3>Sessions 2026 级别成立</h3>
+            <p>
+              Stripe 官方页面确认 2026 年 4 月 29–30 日在旧金山举办；官方新闻稿和博客确认 288 个新产品/功能、9,000+ business leaders and builders、Agentic Commerce、Link agent wallet、MPP、Checkout studio 等主题。
+            </p>
+          </article>
+          <article class="audit-card">
+            <span class="rating ok">官方确定</span>
+            <h3>Stripe 体量数据成立</h3>
+            <p>
+              Stripe 官网当前显示 2025 年 $1.9T、135+ currencies and payment methods、200M+ active subscriptions、50% Fortune 100 used Stripe。更严谨的写法是照抄这个合并口径，不拆成“135 种货币 + 支付方式”。
+            </p>
+          </article>
+          <article class="audit-card">
+            <span class="rating warn">需降级</span>
+            <h3>“35 个 handle”不成立</h3>
+            <p>
+              文章列出的文本实际是 34 个 handle。除非补到 keynote 原图或完整 LinkedIn 评论截图，否则不要写“35 人名单”。
+            </p>
+          </article>
+          <article class="audit-card">
+            <span class="rating warn">需降级</span>
+            <h3>不是 Stripe 官网正式名单</h3>
+            <p>
+              我能确认有 X/公开转述和多人自述“出现在 Stripe Sessions”，但没有查到 Stripe 官网发布的 solo entrepreneurs 名单页。用“公开转述名单”比“Stripe 点名名单”更稳。
+            </p>
+          </article>
+          <article class="audit-card">
+            <span class="rating warn">需降级</span>
+            <h3>收入数字口径混杂</h3>
+            <p>
+              多数收入来自创始人 bio、TrustMRR/ProvenMRR、播客、Indie Hackers 或二次文章；时间点不同。要写“截至某来源披露”而不是“当前收入”。
+            </p>
+          </article>
+          <article class="audit-card">
+            <span class="rating bad">明显风险</span>
+            <h3>“一人公司”不能机械理解</h3>
+            <p>
+              Ghost、Chatbase、Simple Poll、Leave Me Alone、Pallyy、Okara 等更接近小团队、非营利、二人组或 product studio。核心概念应写成 lean company with leverage。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="site-shell">
+        <div class="corrections">
+          <div class="verdict">
+            <strong>可发，但要改。</strong>
+            <p>
+              这不是一篇“事实全错”的稿子。它的问题是气势强于证据层级：官方趋势、Stripe 体量、AI + 全球支付主线都稳；名单归属、人数、收入和“solo”定义要收紧。
+            </p>
+          </div>
+          <div class="fix-list">
+            <div class="fix">
+              <code>修正 01</code>
+              <p>把标题里的“Stripe 点名 35 个独立开发者”改成“Stripe Sessions 公开转述中的 34 个 indie/solo founder 线索”。</p>
+            </div>
+            <div class="fix">
+              <code>修正 02</code>
+              <p>把“每个都是一人公司”改成“solo founder、极小团队、开源非营利、产品工作室混在一起”。</p>
+            </div>
+            <div class="fix">
+              <code>修正 03</code>
+              <p>把所有 MRR/ARR 改成“自述/第三方估算/访谈披露”，并标明时间会变。尤其是 Tibo 的 $8M/$10M、Marc Lou 的月收入、SuperX 的 MRR，都有多个版本。</p>
+            </div>
+            <div class="fix">
+              <code>修正 04</code>
+              <p>@kyzo_io 这一项需要核 handle。公开 X profile 更容易查到的是 @ky__zo，文章里的 @kyzo_io 可能是旧号、转述拼写或漏下划线。</p>
+            </div>
+            <div class="fix">
+              <code>修正 05</code>
+              <p>29.8M nonemployer firms 可用 Census；“约 500 万 $100K+ solo company”和“AI startups 首年 55 markets”要写成第三方基于 Emily Sands/Stripe Sessions 图表整理。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="people" class="site-shell">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Operator map</span>
+            <h2>34 人地图：别抄产品，抄结构。</h2>
+          </div>
+          <p class="section-note">
+            下面不是“谁最牛排行榜”，而是出海选题雷达。高置信代表产品/身份能公开确认；中低置信代表需要更多原始截图或本人资料。
+          </p>
+        </div>
+
+        <div class="handle-tools">
+          <div class="filters" aria-label="筛选商业类型">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="ai">AI 工作流</button>
+            <button class="filter-btn" data-filter="platform">平台增强</button>
+            <button class="filter-btn" data-filter="distribution">分发/内容</button>
+            <button class="filter-btn" data-filter="portfolio">组合拳</button>
+            <button class="filter-btn" data-filter="directory">目录/搜索</button>
+          </div>
+          <input class="search" id="search" type="search" placeholder="搜索 handle / 产品 / 模式" />
+        </div>
+
+        <div class="people-grid" id="peopleGrid"></div>
+      </section>
+
+      <section id="patterns" class="site-shell">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Business patterns</span>
+            <h2>这一批人的共同母题，不是“会写代码”。</h2>
+          </div>
+          <p class="section-note">
+            真正能复制的，是选题结构：谁已有付费习惯，哪里有重复痛点，能不能自动交付，分发是否天然嵌在产品里。
+          </p>
+        </div>
+
+        <div class="patterns">
+          <article class="pattern">
+            <span class="pattern-number">01</span>
+            <h3>结果比技术值钱</h3>
+            <p>Chatbase 是“客服降本”，HeadshotPro 是“职业形象”，AI2SQL 是“降低专业门槛”。用户付钱买少掉的麻烦。</p>
+          </article>
+          <article class="pattern">
+            <span class="pattern-number">02</span>
+            <h3>借平台，不造世界</h3>
+            <p>HelpKit 借 Notion，Simple Poll 借 Slack，Tailscan 借 Tailwind，BoltAI 借 macOS。平台已有用户和预算。</p>
+          </article>
+          <article class="pattern">
+            <span class="pattern-number">03</span>
+            <h3>自动交付优先</h3>
+            <p>API、模板、目录、AI agent、订阅工具、macOS app 都适合小团队。别把一人公司做成一人外包公司。</p>
+          </article>
+          <article class="pattern">
+            <span class="pattern-number">04</span>
+            <h3>分发是产品的一部分</h3>
+            <p>Tweet Hunter、Taplio、SuperX、Memelord 都把分发能力产品化。早期死亡通常不是因为做不出，而是没人知道。</p>
+          </article>
+          <article class="pattern">
+            <span class="pattern-number">05</span>
+            <h3>Portfolio 降低命运感</h3>
+            <p>Pieter、Tony、Marc Lou、Ky、Wilbert、Rodrigo 都不是只押一枪。现金流、经验、代码和渠道会复用。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="roadmap" class="site-shell">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Outbound roadmap</span>
+            <h2>想做出海，先把野心压成 90 天动作。</h2>
+          </div>
+          <p class="section-note">
+            目标不是第一天做成千万美金公司，而是第一周拿到付费信号，第四周完成可收费交付，第九十天知道该放大还是砍掉。
+          </p>
+        </div>
+
+        <div class="roadmap">
+          <aside class="roadmap-aside">
+            <h3>一人公司公式</h3>
+            <p>
+              收入不是靠热血堆出来的。先让这六项同时出现，少两项基本就会卡住。
+            </p>
+            <div class="formula">
+              <span><b>痛点</b><em>每周发生</em></span>
+              <span><b>市场</b><em>英文优先</em></span>
+              <span><b>交付</b><em>低边际成本</em></span>
+              <span><b>支付</b><em>短路径</em></span>
+              <span><b>分发</b><em>可复利</em></span>
+              <span><b>速度</b><em>快验证</em></span>
+            </div>
+          </aside>
+
+          <div class="timeline">
+            <article class="week">
+              <strong>Day 1-7</strong>
+              <div>
+                <h3>只做验证，不做产品。</h3>
+                <p>写 20 个英文细分痛点，筛 3 个，查 Reddit/X/Product Hunt/竞品评论。做 1 页落地页和价格按钮，找 30 个潜在用户，判断有没有钱或 30 分钟深聊。</p>
+              </div>
+            </article>
+            <article class="week">
+              <strong>Day 8-21</strong>
+              <div>
+                <h3>做一个可收费核心动作。</h3>
+                <p>不做复杂后台和大 dashboard。用手工、半自动、no-code、AI coding 拼出结果。第一版必须能收款，哪怕交付很窄。</p>
+              </div>
+            </article>
+            <article class="week">
+              <strong>Day 22-45</strong>
+              <div>
+                <h3>只选一个主战场分发。</h3>
+                <p>目录/工具选 SEO + free tools；开发者工具选 X/build in public；明确岗位 B2B 选冷邮件；平台增强选 marketplace。</p>
+              </div>
+            </article>
+            <article class="week">
+              <strong>Day 46-70</strong>
+              <div>
+                <h3>把用户原话变成产品。</h3>
+                <p>每周记录 10 条用户原话，修一个最大阻塞，删一个复杂流程，自动化一个重复动作。不要沉迷仪表盘，早期用户吐槽才是数据。</p>
+              </div>
+            </article>
+            <article class="week">
+              <strong>Day 71-90</strong>
+              <div>
+                <h3>决定继续、转向或关闭。</h3>
+                <p>看 4 个硬指标：是否有人付费、是否有人复购或续费、是否有稳定来源、是否能涨价。没有，就体面关闭，把学到的东西复用到下一枪。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="goal" class="site-shell">
+        <div class="section-head">
+          <div>
+            <span class="kicker">/goal command</span>
+            <h2>可复用的 /goal 命令。</h2>
+          </div>
+          <p class="section-note">
+            这条命令是给后续迭代网页用的：它把“事实审计 + 出海行动地图”的交付标准固定下来。
+          </p>
+        </div>
+
+        <div class="goal-panel">
+          <div class="goal-bar">
+            <span>/goal · stripe-solo-operators-webpage</span>
+            <button class="copy-btn" id="copyGoal" type="button">复制</button>
+          </div>
+          <pre id="goalText">/goal 生成一个中文研究型网页《Stripe Sessions 2026 独立创业者事实审计与出海行动地图》。
+
+目标：
+1. 核验一篇关于 Stripe Sessions 2026 solo entrepreneurs / indie hackers 的文章，区分官方事实、社媒线索、第三方估算和推论。
+2. 把 34 个公开转述 handle 做成可筛选地图，说明他们的产品、商业模式、可学习结构和证据置信度。
+3. 给想做出海的一人公司/小团队整理 90 天行动路线，不讲鸡血，只讲验证、收款、交付、分发和复盘。
+
+页面要求：
+- 第一屏直接给结论：主线成立，但名单非 Stripe 官网正式名单，收入数字需降级。
+- 必须包含：事实修正、34 人地图、5 类商业母题、90 天路线、来源清单。
+- 文案中文，语气锋利但证据严谨。
+- 设计风格：研究档案 / 编辑部证据板 / 商业情报，不做营销落地页。
+- 技术：单页静态 HTML/CSS/JS，可直接打开，可上传 GitHub Pages。
+
+证据要求：
+- Stripe 官方来源优先：Sessions 2026 官网、Stripe 新闻稿、Sessions 2026 announcement blog、Stripe 2025 annual update / 首页。
+- 人物与收入使用个人页、产品官网、Indie Hackers、TrustMRR/ProvenMRR、播客或公开社媒；全部标注“自述/第三方/估算/时间点变化”。
+- 不得把公开转述名单写成 Stripe 官方正式名单。
+- 不得把小团队、非营利、产品工作室机械写成“每个都是一人公司”。
+
+输出：
+- index.html
+- README.md
+- 页面内保留本 /goal 命令，方便下一次继续迭代。</pre>
+        </div>
+      </section>
+
+      <section id="sources" class="site-shell">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Sources</span>
+            <h2>来源清单与置信度。</h2>
+          </div>
+          <p class="section-note">
+            这份网页优先保留一手来源；社媒镜像和二次文章只用于辅助定位，不能替代官方发布或本人页面。
+          </p>
+        </div>
+
+        <div class="sources">
+          <article class="source">
+            <strong><a href="https://stripesessions.com/" target="_blank" rel="noreferrer">Stripe Sessions 2026 官网</a></strong>
+            <p>确认 The internet economy conference、日期、地点、会议定位。</p>
+          </article>
+          <article class="source">
+            <strong><a href="https://stripe.com/newsroom/news/sessions-2026" target="_blank" rel="noreferrer">Stripe Sessions 2026 新闻稿</a></strong>
+            <p>确认 288 launches、AI economic infrastructure、Link agent wallets、Google partnership 等。</p>
+          </article>
+          <article class="source">
+            <strong><a href="https://stripe.com/blog/everything-we-announced-at-sessions-2026" target="_blank" rel="noreferrer">Everything announced at Sessions 2026</a></strong>
+            <p>确认 9,000+ business leaders and builders、MPP、Checkout studio、Agentic Commerce Suite 扩展。</p>
+          </article>
+          <article class="source">
+            <strong><a href="https://stripe.com/annual-updates/2025" target="_blank" rel="noreferrer">Stripe 2025 annual update</a></strong>
+            <p>确认 businesses on Stripe generated $1.9T，以及 2025 startup/global/agentic commerce 主线。</p>
+          </article>
+          <article class="source">
+            <strong><a href="https://www.census.gov/newsroom/press-releases/2025/nonemployer-business-characteristics.html" target="_blank" rel="noreferrer">U.S. Census nonemployer businesses</a></strong>
+            <p>确认 29.8M nonemployer businesses、$1.7T receipts 是 Census 2022 口径。</p>
+          </article>
+          <article class="source">
+            <strong><a href="https://crevio.co/blog/solopreneur-statistics" target="_blank" rel="noreferrer">Crevio: Solopreneur Statistics 2026</a></strong>
+            <p>第三方整理 Emily Sands / Stripe Sessions 图表；用于 5M、55 markets 等线索，需降级引用。</p>
+          </article>
+          <article class="source">
+            <strong><a href="https://techcrunch.com/2017/04/11/stripe-acquires-indie-hackers-a-knowledge-sharing-community-for-entrepreneurs/" target="_blank" rel="noreferrer">TechCrunch: Stripe acquired Indie Hackers</a></strong>
+            <p>确认 Stripe 与 indie founder 社群的历史关系。</p>
+          </article>
+          <article class="source">
+            <strong><a href="https://ghost.org/about/" target="_blank" rel="noreferrer">Ghost About</a></strong>
+            <p>确认 Ghost 是 open-source nonprofit、John O'Nolan/Hannah Wolfe 创办、公开营收指标。</p>
+          </article>
+          <article class="source">
+            <strong><a href="https://marc.io/about" target="_blank" rel="noreferrer">Marc Köhlbrugge About</a></strong>
+            <p>确认 BetaList、WIP、Startup Jobs 等项目。</p>
+          </article>
+          <article class="source">
+            <strong><a href="https://www.headshotpro.com/" target="_blank" rel="noreferrer">HeadshotPro 官网</a></strong>
+            <p>确认 AI headshots 和公开用户/生成量数字，数字会随时间变化。</p>
+          </article>
+          <article class="source">
+            <strong><a href="https://dominiksobe.com/thoughts/1000-mrr/" target="_blank" rel="noreferrer">Dominik Sobe: HelpKit reached $1000 MRR</a></strong>
+            <p>确认 HelpKit 是 Notion-to-help-center 产品及早期 MRR/客户数。</p>
+          </article>
+          <article class="source">
+            <strong><a href="https://trustmrr.com/founder/marclou" target="_blank" rel="noreferrer">TrustMRR: Marc Lou</a></strong>
+            <p>第三方/创始人连接型收入资料，用作收入参考，不写死为当前事实。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="site-shell">
+        <p>
+          Built as a fact-checking web report. 结论版本：2026-05-04，Asia/Shanghai。收入、handle、产品状态会变化，请以来源日期和原始页面为准。
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const people = [
+        {
+          handle: "@levelsio",
+          name: "Pieter Levels",
+          product: "Nomad List / Remote OK / PhotoAI / InteriorAI",
+          pattern: "全球英文市场 + portfolio + founder-led distribution",
+          confidence: "high",
+          tags: ["portfolio", "ai", "directory", "distribution"],
+        },
+        {
+          handle: "@marckohlbrugge",
+          name: "Marc Köhlbrugge",
+          product: "BetaList / WIP / Startup Jobs",
+          pattern: "占住创业者早期流量节点，社区和目录复用",
+          confidence: "high",
+          tags: ["directory", "distribution", "portfolio"],
+        },
+        {
+          handle: "@jackfriks",
+          name: "Jack Friks",
+          product: "Post Bridge",
+          pattern: "社媒运营持续痛点，靠内容与小工具切入",
+          confidence: "medium",
+          tags: ["distribution", "platform"],
+        },
+        {
+          handle: "@yasser_elsaid_",
+          name: "Yasser Elsaid",
+          product: "Chatbase",
+          pattern: "AI + 客服/知识库刚需；已从 solo 扩到团队",
+          confidence: "high",
+          tags: ["ai", "platform"],
+        },
+        {
+          handle: "@JohnONolan",
+          name: "John O'Nolan",
+          product: "Ghost",
+          pattern: "开源非营利 + 订阅出版基础设施，不是典型一人公司",
+          confidence: "high",
+          tags: ["platform", "distribution"],
+        },
+        {
+          handle: "@erwin_AI",
+          name: "Erwin",
+          product: "Tailscan / Lexboost AI",
+          pattern: "嵌入 Tailwind 等已有开发者生态",
+          confidence: "medium",
+          tags: ["platform", "ai"],
+        },
+        {
+          handle: "@marclou",
+          name: "Marc Lou",
+          product: "ShipFast / CodeFast / DataFast / TrustMRR",
+          pattern: "卖启动速度，模板/课程/工具共用受众",
+          confidence: "high",
+          tags: ["portfolio", "distribution"],
+        },
+        {
+          handle: "@phuctm97",
+          name: "Minh-Phuc Tran",
+          product: "Queue.so / NextStatic 等",
+          pattern: "连续小产品 + 出售，资产翻转型 indie",
+          confidence: "medium",
+          tags: ["portfolio"],
+        },
+        {
+          handle: "@sobedominik",
+          name: "Dominik Sobe",
+          product: "HelpKit",
+          pattern: "Notion 生态增强，把临时文档变正式客服中心",
+          confidence: "high",
+          tags: ["platform"],
+        },
+        {
+          handle: "@madebyshaurya",
+          name: "Shaurya Gupta",
+          product: "SpendSmart / iOS projects",
+          pattern: "新生代 maker，公开商业数据较少",
+          confidence: "low",
+          tags: ["ai", "portfolio"],
+        },
+        {
+          handle: "@tdinh_me",
+          name: "Tony Dinh",
+          product: "TypingMind / DevUtils / Xnapper / Black Magic",
+          pattern: "dogfooding 自用工具，开发者和 AI 用户付费",
+          confidence: "high",
+          tags: ["ai", "portfolio", "distribution"],
+        },
+        {
+          handle: "@mustafaergisi",
+          name: "Mustafa Ergisi",
+          product: "AI2SQL / CrewClaw",
+          pattern: "AI 降低 SQL 专业门槛，岗位结果明确",
+          confidence: "medium",
+          tags: ["ai"],
+        },
+        {
+          handle: "@dannypostma",
+          name: "Danny Postma",
+          product: "HeadshotPro",
+          pattern: "AI 图片绑定职业身份、面子和销售场景",
+          confidence: "high",
+          tags: ["ai", "distribution"],
+        },
+        {
+          handle: "@yongfook",
+          name: "Jon Yongfook",
+          product: "Bannerbear",
+          pattern: "图像/视频自动化 API，用户少也能高客单",
+          confidence: "high",
+          tags: ["platform"],
+        },
+        {
+          handle: "@tibo_maker",
+          name: "Tibo",
+          product: "Tweet Hunter / Taplio / Revid / Feather",
+          pattern: "创作者增长工具，分发能力先于产品",
+          confidence: "high",
+          tags: ["distribution", "portfolio", "ai"],
+        },
+        {
+          handle: "@Timb03",
+          name: "Tim Bennetto",
+          product: "Pallyy",
+          pattern: "社媒管理工具，免费工具和细分体验获客",
+          confidence: "medium",
+          tags: ["distribution", "platform"],
+        },
+        {
+          handle: "@kyzo_io / @ky__zo?",
+          name: "Ky Zo",
+          product: "Agentic Engineer / Pretty Sports / OpenRec 等",
+          pattern: "产品组合 + 小退出；handle 需要二次核对",
+          confidence: "low",
+          tags: ["portfolio", "ai"],
+        },
+        {
+          handle: "@loaibassam",
+          name: "Leo / Loai Bassam",
+          product: "Plutio / Super Work AI",
+          pattern: "自由职业工作流产品；Stripe 出现自述需补原帖",
+          confidence: "low",
+          tags: ["ai", "platform"],
+        },
+        {
+          handle: "@damengchen",
+          name: "Damon Chen",
+          product: "Testimonial / PDF.ai",
+          pattern: "信任资产 + 文档效率，靠近转化和销售",
+          confidence: "medium",
+          tags: ["ai", "platform", "portfolio"],
+        },
+        {
+          handle: "@jamesivings",
+          name: "James Ivings",
+          product: "Leave Me Alone / Ellie / StartKit.AI",
+          pattern: "邮件退订/隐私强痛点，二人极小团队",
+          confidence: "high",
+          tags: ["platform", "ai"],
+        },
+        {
+          handle: "@dinkydani21",
+          name: "Danielle Johnson",
+          product: "Leave Me Alone",
+          pattern: "伴侣创业/极小团队，不应写成单人样本",
+          confidence: "high",
+          tags: ["platform"],
+        },
+        {
+          handle: "@daniel_nguyenx",
+          name: "Daniel Nguyen",
+          product: "BoltAI / KTool / PDFPals",
+          pattern: "macOS 原生 AI 工具，深体验避开红海",
+          confidence: "high",
+          tags: ["ai", "platform", "portfolio"],
+        },
+        {
+          handle: "@wilhelmklopp",
+          name: "Wilhelm Klopp",
+          product: "Simple Poll",
+          pattern: "Slack 小插件长成大现金流，小团队样本",
+          confidence: "high",
+          tags: ["platform"],
+        },
+        {
+          handle: "@fatimarizwan",
+          name: "Fatima Rizwan",
+          product: "Okara / AI CMO",
+          pattern: "把增长/内容/Reddit/SEO 部门 agent 化",
+          confidence: "medium",
+          tags: ["ai", "distribution"],
+        },
+        {
+          handle: "@iamjasonlevin",
+          name: "Jason Levin",
+          product: "Memelord",
+          pattern: "meme marketing 低成本品牌分发",
+          confidence: "medium",
+          tags: ["distribution", "ai"],
+        },
+        {
+          handle: "@chrisdengso",
+          name: "Christopher Dengsø",
+          product: "Moderation API / Cueup",
+          pattern: "API 工具 + 垂直 marketplace 双资产",
+          confidence: "medium",
+          tags: ["platform", "portfolio"],
+        },
+        {
+          handle: "@rrmdp",
+          name: "Rodrigo Rocco",
+          product: "JobBoardSearch / ReviewReplyAI",
+          pattern: "boring directory + 小 AI 工具，普通人最可学",
+          confidence: "medium",
+          tags: ["directory", "ai", "portfolio"],
+        },
+        {
+          handle: "@wilbertliu",
+          name: "Wilbert Liu",
+          product: "Poodle SDK / Browserhub / Feedbackpaw / Mumu",
+          pattern: "小产品多次出售，退出也是能力",
+          confidence: "medium",
+          tags: ["portfolio", "platform"],
+        },
+        {
+          handle: "@robjama",
+          name: "Robleh Jama",
+          product: "Tomorrow / Boom Vision / Tiny Hearts",
+          pattern: "产品工作室型创始人，价值在品味和 leverage",
+          confidence: "medium",
+          tags: ["portfolio", "ai"],
+        },
+        {
+          handle: "@rexan_wong",
+          name: "Rexan Wong",
+          product: "Brandthetics / Text Behind Image / content apps",
+          pattern: "AI 原生年轻 builder，速度快但商业数据仍早",
+          confidence: "medium",
+          tags: ["ai", "distribution"],
+        },
+        {
+          handle: "@sanderfish",
+          name: "Sander Visser",
+          product: "Checkout Page",
+          pattern: "支付页/收钱工具，Stripe 生态旁边的基础设施",
+          confidence: "medium",
+          tags: ["platform"],
+        },
+        {
+          handle: "@josefbuettgen",
+          name: "Josef Büttgen",
+          product: "SetterAI / GoLeadSetter",
+          pattern: "AI voice + speed-to-lead，服务业别漏单",
+          confidence: "medium",
+          tags: ["ai"],
+        },
+        {
+          handle: "@clarkcharlie03",
+          name: "Charlie Clark",
+          product: "Liinks / Thiings / Blogg / Colors",
+          pattern: "普通赛道靠审美、模板和持续迭代穿透",
+          confidence: "medium",
+          tags: ["distribution", "portfolio"],
+        },
+        {
+          handle: "@robj3d3",
+          name: "Rob Hallam",
+          product: "SuperX",
+          pattern: "先打穿 X 分发，再把能力产品化",
+          confidence: "medium",
+          tags: ["distribution", "platform"],
+        },
+      ];
+
+      const peopleGrid = document.querySelector("#peopleGrid");
+      const search = document.querySelector("#search");
+      const filterButtons = Array.from(document.querySelectorAll(".filter-btn"));
+      let activeFilter = "all";
+
+      function confidenceLabel(value) {
+        if (value === "high") return "高置信";
+        if (value === "medium") return "中置信";
+        return "待核";
+      }
+
+      function renderPeople() {
+        const query = search.value.trim().toLowerCase();
+        const filtered = people.filter((person) => {
+          const matchesFilter = activeFilter === "all" || person.tags.includes(activeFilter);
+          const haystack = `${person.handle} ${person.name} ${person.product} ${person.pattern} ${person.tags.join(" ")}`.toLowerCase();
+          return matchesFilter && (!query || haystack.includes(query));
+        });
+
+        peopleGrid.innerHTML = filtered
+          .map(
+            (person) => `
+              <article class="person">
+                <div class="person-head">
+                  <span class="avatar">${person.name.slice(0, 1)}</span>
+                  <span class="confidence ${person.confidence}">${confidenceLabel(person.confidence)}</span>
+                </div>
+                <div>
+                  <h3>${person.name}</h3>
+                  <div class="handle">${person.handle}</div>
+                </div>
+                <p><strong>${person.product}</strong></p>
+                <p>${person.pattern}</p>
+                <div class="tag-row">${person.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</div>
+              </article>
+            `,
+          )
+          .join("");
+      }
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          activeFilter = button.dataset.filter;
+          filterButtons.forEach((item) => item.classList.toggle("active", item === button));
+          renderPeople();
+        });
+      });
+
+      search.addEventListener("input", renderPeople);
+      renderPeople();
+
+      document.querySelector("#copyGoal").addEventListener("click", async () => {
+        const text = document.querySelector("#goalText").innerText;
+        try {
+          await navigator.clipboard.writeText(text);
+          document.querySelector("#copyGoal").innerText = "已复制";
+          setTimeout(() => {
+            document.querySelector("#copyGoal").innerText = "复制";
+          }, 1400);
+        } catch {
+          document.querySelector("#copyGoal").innerText = "复制失败";
+        }
+      });
+    </script>
+  </body>
+</html>
