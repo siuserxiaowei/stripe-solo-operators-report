@@ -622,6 +622,54 @@
         font-size: 14px;
       }
 
+      .contact-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 0.62fr) minmax(240px, 0.38fr);
+        gap: 18px;
+        align-items: stretch;
+        border: 1px solid var(--black);
+        background: rgba(255, 250, 240, 0.78);
+        box-shadow: var(--shadow);
+      }
+
+      .contact-copy {
+        padding: clamp(22px, 4vw, 34px);
+      }
+
+      .contact-copy h2 {
+        margin-bottom: 14px;
+      }
+
+      .contact-copy p {
+        max-width: 620px;
+        color: var(--muted);
+        font-size: 17px;
+      }
+
+      .contact-id {
+        display: inline-flex;
+        margin-top: 10px;
+        padding: 9px 11px;
+        border: 1px solid rgba(32, 32, 29, 0.22);
+        background: rgba(255, 255, 255, 0.58);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+      }
+
+      .qr-card {
+        display: grid;
+        place-items: center;
+        padding: 18px;
+        border-left: 1px solid rgba(32, 32, 29, 0.2);
+        background: #fff;
+      }
+
+      .qr-card img {
+        width: min(100%, 280px);
+        height: auto;
+        display: block;
+      }
+
       .goal {
         border: 1px solid var(--black);
         background: #11100e;
@@ -700,6 +748,15 @@
         .reading-note {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
+
+        .contact-panel {
+          grid-template-columns: 1fr;
+        }
+
+        .qr-card {
+          border-top: 1px solid rgba(32, 32, 29, 0.2);
+          border-left: 0;
+        }
       }
 
       @media (max-width: 680px) {
@@ -767,6 +824,7 @@
           <a href="#routes">出海路线</a>
           <a href="#directory">产品链接库</a>
           <a href="#playbook">90 天动作</a>
+          <a href="#contact">联系</a>
           <a href="#goal">/goal</a>
         </nav>
       </div>
@@ -1022,6 +1080,22 @@
             <b>别低级模仿</b>
             <p>看到 AI headshot 就做 AI headshot，是最差的抄法。要抄“职业身份 + 付费意愿 + 自动交付”。</p>
           </article>
+        </div>
+      </section>
+
+      <section id="contact" class="wrap">
+        <div class="contact-panel">
+          <div class="contact-copy">
+            <span class="kicker">Contact</span>
+            <h2>想继续交流出海产品，可以加我微信。</h2>
+            <p>
+              如果你也在拆这些独立产品、验证英文市场、做 AI 工具或小 SaaS，可以扫码添加。备注一下你正在做的方向，会更容易对上话。
+            </p>
+            <span class="contact-id">微信：siuserxiaowei</span>
+          </div>
+          <div class="qr-card">
+            <img src="assets/wechat-qr-siuserxiaowei.png" alt="siuserxiaowei 微信二维码" />
+          </div>
         </div>
       </section>
 

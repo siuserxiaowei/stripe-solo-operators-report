@@ -2,7 +2,7 @@
 
 这个网页不再把重点放在“名单是否真实”上，而是把文章里提到的 indie hackers / solo founders / 小团队产品拆成一份可学习的出海产品地图。
 
-联系方式：`siuserxiaowei`
+联系方式：`siuserxiaowei`，网页内已加入微信二维码。
 
 ## 页面重点
 
