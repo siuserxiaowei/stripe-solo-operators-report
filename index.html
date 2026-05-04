@@ -8,6 +8,29 @@
       name="description"
       content="把 Stripe Sessions 2026 公开转述中的 indie/solo founder 案例拆成可学习的出海产品路线、产品链接库和行动清单。"
     />
+    <link rel="canonical" href="https://siuserxiaowei.github.io/stripe-solo-operators-report/" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/share-card.png" />
+    <meta name="theme-color" content="#f4efe5" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://siuserxiaowei.github.io/stripe-solo-operators-report/" />
+    <meta property="og:title" content="Stripe 独立创业者产品学习地图" />
+    <meta
+      property="og:description"
+      content="拆解 34 个 indie/solo founder 产品，整理产品链接库、出海路线和 90 天验证动作。"
+    />
+    <meta property="og:image" content="https://siuserxiaowei.github.io/stripe-solo-operators-report/assets/share-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Solo Product Study Map share card" />
+    <meta property="og:site_name" content="Solo Product Study Map" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Stripe 独立创业者产品学习地图" />
+    <meta
+      name="twitter:description"
+      content="拆解 34 个 indie/solo founder 产品，整理产品链接库、出海路线和 90 天验证动作。"
+    />
+    <meta name="twitter:image" content="https://siuserxiaowei.github.io/stripe-solo-operators-report/assets/share-card.png" />
     <style>
       :root {
         --ink: #15130f;
@@ -194,6 +217,7 @@
       }
 
       .hero-actions,
+      .contact-actions,
       .filters,
       .quick-links,
       .links {
@@ -465,6 +489,46 @@
         background: rgba(255, 255, 255, 0.62);
       }
 
+      .search-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .clear-search {
+        min-height: 38px;
+        padding: 8px 11px;
+        border: 1px solid rgba(32, 32, 29, 0.22);
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+      }
+
+      .clear-search:hover,
+      .clear-search:focus-visible {
+        color: #fff;
+        background: var(--black);
+      }
+
+      .directory-status {
+        margin: 0 0 12px;
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+      }
+
+      .no-results {
+        grid-column: 1 / -1;
+        padding: 22px;
+        border: 1px dashed rgba(32, 32, 29, 0.28);
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.42);
+      }
+
       .directory {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -656,6 +720,20 @@
         font-size: 13px;
       }
 
+      .copy-contact {
+        display: inline-flex;
+        align-items: center;
+        min-height: 39px;
+        margin-top: 10px;
+        padding: 8px 11px;
+        border: 1px solid var(--black);
+        color: #fff;
+        background: var(--black);
+        cursor: pointer;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+      }
+
       .qr-card {
         display: grid;
         place-items: center;
@@ -715,6 +793,31 @@
         color: var(--muted);
         font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
         font-size: 12px;
+      }
+
+      .back-to-top {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 18;
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--black);
+        color: #fff;
+        background: var(--black);
+        cursor: pointer;
+        box-shadow: 4px 4px 0 rgba(36, 95, 157, 0.45);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(8px);
+        transition: opacity 160ms ease, transform 160ms ease;
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
       }
 
       @media (max-width: 1080px) {
@@ -780,7 +883,7 @@
         }
 
         h1 {
-          font-size: clamp(42px, 15vw, 76px);
+          font-size: clamp(36px, 12vw, 58px);
         }
 
         .lesson-grid,
@@ -802,6 +905,11 @@
         }
 
         .search {
+          width: 100%;
+        }
+
+        .search-wrap,
+        .clear-search {
           width: 100%;
         }
 
@@ -842,6 +950,7 @@
           <div class="hero-actions">
             <a class="button" href="#directory">直接看产品链接</a>
             <a class="button secondary" href="#study">看优先研究样本</a>
+            <a class="button secondary" href="#contact">加微信交流</a>
           </div>
         </div>
 
@@ -987,9 +1096,13 @@
             <button class="filter" data-filter="distribution">分发/内容</button>
             <button class="filter" data-filter="portfolio">Portfolio</button>
           </div>
-          <input class="search" id="search" type="search" placeholder="搜产品、handle、学习点" />
+          <div class="search-wrap">
+            <input class="search" id="search" type="search" placeholder="搜产品、handle、学习点" />
+            <button class="clear-search" id="clearSearch" type="button">清空</button>
+          </div>
         </div>
 
+        <p class="directory-status" id="directoryStatus"></p>
         <div class="directory" id="directoryGrid"></div>
       </section>
 
@@ -1091,7 +1204,10 @@
             <p>
               如果你也在拆这些独立产品、验证英文市场、做 AI 工具或小 SaaS，可以扫码添加。备注一下你正在做的方向，会更容易对上话。
             </p>
-            <span class="contact-id">微信：siuserxiaowei</span>
+            <div class="contact-actions">
+              <span class="contact-id">微信：siuserxiaowei</span>
+              <button class="copy-contact" id="copyWechat" type="button">复制微信号</button>
+            </div>
           </div>
           <div class="qr-card">
             <img src="assets/wechat-qr-siuserxiaowei.png" alt="siuserxiaowei 微信二维码" />
@@ -1142,6 +1258,8 @@
         <p>Updated 2026-05-04. 联系方式：siuserxiaowei。 这是一份产品学习地图，不是投资建议，也不是收入排行榜。链接和产品状态会变化，请以原页面为准。</p>
       </div>
     </footer>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="返回顶部">↑</button>
 
     <script>
       const studyItems = [
@@ -1324,7 +1442,6 @@
           confidence: "medium",
           lesson: "小产品、出售、复盘，适合学习如何把产品当资产而不是只当项目。",
           links: [
-            ["Queue.so", "https://www.queue.so"],
             ["Phuc site", "https://phuctm97.com"],
             ["Acquire story", "https://blog.acquire.com/startup-acquisition-episode-56/"],
           ],
@@ -1537,10 +1654,7 @@
           type: ["portfolio", "ai"],
           confidence: "medium",
           lesson: "产品工作室型样本。重点学产品品味、团队 leverage 和 AI-native studio 的组织方式。",
-          links: [
-            ["Tomorrow Studio", "https://www.tomorrowstudio.ai"],
-            ["Boom Vision", "https://boom.vision"],
-          ],
+          links: [["Tomorrow Studio", "https://www.tomorrowstudio.ai"]],
         },
         {
           name: "Rexan Wong",
@@ -1622,6 +1736,8 @@
 
       const grid = document.querySelector("#directoryGrid");
       const search = document.querySelector("#search");
+      const clearSearch = document.querySelector("#clearSearch");
+      const directoryStatus = document.querySelector("#directoryStatus");
       const filterButtons = Array.from(document.querySelectorAll(".filter"));
       let activeFilter = "all";
 
@@ -1640,6 +1756,16 @@
             .join(" ")}`.toLowerCase();
           return matchesFilter && (!query || haystack.includes(query));
         });
+
+        directoryStatus.textContent = `当前显示 ${filtered.length} / ${directory.length} 个案例，产品/资料链接共 ${directory.reduce(
+          (total, entry) => total + entry.links.length,
+          0,
+        )} 个。`;
+
+        if (!filtered.length) {
+          grid.innerHTML = `<div class="no-results">没有匹配结果。换个关键词，或者点“清空”回到完整产品库。</div>`;
+          return;
+        }
 
         grid.innerHTML = filtered
           .map(
@@ -1669,14 +1795,59 @@
       });
 
       search.addEventListener("input", renderDirectory);
+      clearSearch.addEventListener("click", () => {
+        search.value = "";
+        activeFilter = "all";
+        filterButtons.forEach((item) => item.classList.toggle("active", item.dataset.filter === "all"));
+        renderDirectory();
+        search.focus();
+      });
+
+      async function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+          return;
+        }
+
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.left = "-9999px";
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+      }
+
+      document.querySelector("#copyWechat").addEventListener("click", async () => {
+        try {
+          await copyText("siuserxiaowei");
+          document.querySelector("#copyWechat").innerText = "已复制";
+          setTimeout(() => (document.querySelector("#copyWechat").innerText = "复制微信号"), 1400);
+        } catch {
+          document.querySelector("#copyWechat").innerText = "请手动复制";
+          setTimeout(() => (document.querySelector("#copyWechat").innerText = "复制微信号"), 1600);
+        }
+      });
+
       document.querySelector("#copyGoal").addEventListener("click", async () => {
         try {
-          await navigator.clipboard.writeText(document.querySelector("#goalText").innerText);
+          await copyText(document.querySelector("#goalText").innerText);
           document.querySelector("#copyGoal").innerText = "已复制";
           setTimeout(() => (document.querySelector("#copyGoal").innerText = "复制"), 1400);
         } catch {
-          document.querySelector("#copyGoal").innerText = "复制失败";
+          document.querySelector("#copyGoal").innerText = "请手动复制";
+          setTimeout(() => (document.querySelector("#copyGoal").innerText = "复制"), 1600);
         }
+      });
+
+      const backToTop = document.querySelector("#backToTop");
+      window.addEventListener("scroll", () => {
+        backToTop.classList.toggle("visible", window.scrollY > 680);
+      });
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
 
       renderStudy();
