@@ -1,5 +1,18 @@
 # Stripe 独立创业者产品学习地图
 
+<!-- SIUSER-SEO-INTRO:START -->
+
+## 项目介绍 / Project Introduction
+
+**中文介绍**：Stripe Solo Operators 报告整理与可视化页面，分析一人公司、独立开发、AI 工具和全球化收入趋势。
+
+**English**: A report and visualization project for Stripe Solo Operators, analyzing one-person companies, indie building, AI tools, and global revenue trends.
+
+**SEO 关键词 / SEO Keywords**: Stripe, solo operators, indie hacker, AI tools, 一人公司
+
+<!-- SIUSER-SEO-INTRO:END -->
+
+
 这个网页不再把重点放在“名单是否真实”上，而是把文章里提到的 indie hackers / solo founders / 小团队产品拆成一份可学习的出海产品地图。
 
 联系方式：`siuserxiaowei`，网页内已加入微信二维码。
@@ -49,3 +62,17 @@ python3 -m http.server 4173
 ```
 
 然后访问 `http://localhost:4173`。
+
+<!-- SIUSER-CONTACT:START -->
+
+## 联系我 / Contact
+
+想交流 AI 工具、内容自动化、SEO、私域增长或项目合作，可以扫码加我微信。
+
+For collaboration on AI tools, content automation, SEO, private-domain growth, or product experiments, scan the WeChat QR code below.
+
+<img src="https://raw.githubusercontent.com/siuserxiaowei/siuserxiaowei/main/assets/contact/wechat-qrcode.jpg" width="180" alt="WeChat QR code / 微信二维码" />
+
+**关键词 / Keywords**: Stripe, solo operators, indie hacker, AI tools, AI tools, AI automation, GitHub Pages, SEO
+
+<!-- SIUSER-CONTACT:END -->
