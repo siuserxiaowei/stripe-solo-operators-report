@@ -1,5 +1,65 @@
 # Stripe 独立创业者产品学习地图
 
+<!-- SIUSER-REPO-GUIDE:START -->
+## Repository Guide
+
+### What This Repository Does
+
+Stripe Solo Operators 报告：整理一人公司、独立开发者和 AI 工具商业化趋势。
+
+English summary: Stripe Solo Operators report summarizing solo business, indie builder, and AI tooling trends.
+
+### Online Entry Points
+
+- GitHub repository: https://github.com/siuserxiaowei/stripe-solo-operators-report
+- Live / GitHub Pages: https://siuserxiaowei.github.io/stripe-solo-operators-report/
+- Default branch: `main`
+- Primary language: `HTML`
+
+### How To Read / Learn This Repository
+
+1. 先读本 README，确认项目目标、在线入口和本地运行方式。
+2. 打开上方 Live / GitHub Pages 链接，先从最终效果理解项目。
+3. 按仓库目录从入口文件、数据文件、脚本和文档依次阅读。
+4. 如果要修改内容，先小范围改动，再运行本 README 中的验证命令。
+
+### Clone This Repository
+
+```bash
+git clone https://github.com/siuserxiaowei/stripe-solo-operators-report.git
+cd stripe-solo-operators-report
+```
+
+### Run Or View Locally
+
+```bash
+python3 -m http.server 8000
+```
+
+然后打开 `http://127.0.0.1:8000/`。
+
+### Repository Map
+
+| Path | Purpose |
+| --- | --- |
+| `README.md` | 项目入口说明，先读这里。 |
+| `index.html` | 静态站首页或页面入口。 |
+| `assets/` | 图片、样式、字体或页面资源。 |
+
+### Maintenance Notes
+
+- Keep this README in sync when the project purpose, live link, or run commands change.
+- Prefer small, focused commits when changing code, data, or generated pages.
+- Run the relevant build or validation command before publishing changes.
+- If this is a generated/static archive, update the source data first, then regenerate the public files.
+
+### Privacy And Safety
+
+- Do not commit API keys, tokens, passwords, cookies, private URLs, or internal account data.
+- Keep private source material out of public GitHub Pages output unless it has been explicitly cleared for publication.
+- When in doubt, run a quick secret scan such as `rg -n "token|secret|password|access_key|authorization"` before pushing.
+<!-- SIUSER-REPO-GUIDE:END -->
+
 <!-- SIUSER-SEO-INTRO:START -->
 
 ## 项目介绍 / Project Introduction
@@ -11,7 +71,6 @@
 **SEO 关键词 / SEO Keywords**: Stripe, solo operators, indie hacker, AI tools, 一人公司
 
 <!-- SIUSER-SEO-INTRO:END -->
-
 
 这个网页不再把重点放在“名单是否真实”上，而是把文章里提到的 indie hackers / solo founders / 小团队产品拆成一份可学习的出海产品地图。
 
